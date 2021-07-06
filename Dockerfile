@@ -1,4 +1,4 @@
- FROM ubuntu
- MAINTAINER akashsangle377@gmail.com
- RUN apt-get update
- RUN apt-get install nginx -y
+FROM nginx:alpine
+
+COPY default.conf /etc/nginx/conf.d/
+COPY index.html /usr/share/nginx/html/
